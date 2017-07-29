@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Practical Todos</title>
+    <link id="favicon" rel="icon" href="https://hyperdev.com/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <h1>Todo List</h1>
+
+    <div>
+      <button onclick="handlers.toggleAll()">Toggle All</button>
+    </div>
     
-    <head>
-        <meta charset="utf-8">
-        <!-- Latest compiled and minified JQuery -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-        <!-- Latest compiled and minified JS -->
-        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-            <script src="todos.js"></script>   
-    </head>
+    <div>
+      <button onclick="handlers.addTodo()">Add</button>
+      <input id="addTodoTextInput" type="text">
+    </div>
     
-    <body>
-        <h1>Todo List</h1>
-      
-        <div>  
-            <button onclick="handlers.displayTodos()">Display Todos</button>
-            <button onclick="handlers.toggleAll()">Toggle All</button>
-        </div>
-        
-        <div>
-            <button onclick="handlers.addTodo()">Add</button>
-            <input id="addTodoTextInput" type="text" name="todo" placeholder="Enter Todo"/>
-        </div>
-        
-        <div>
-            <button onclick="handlers.changeTodo()">Change Todo</button>
-            <input id="changeTodoPositionInput" type="number"/>
-            <input id="changeTodoTextInput" type="text"/>
-        </div>
-        
-        <div>
-            <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
-            <input id="toggleCompletedPositionInput" type="number"/>
-        </div>
-        
-        <ol id="todos"></ol>
-        
-    </body>
+    <div>
+      <button onclick="handlers.changeTodo()">Change Todo</button>
+      <input id="changeTodoPositionInput" type="number">
+      <input id="changeTodoTextInput" type="text">
+    </div>
     
+    <div>
+      <button onclick="handlers.deleteTodo()">Delete</button>
+      <input id="deleteTodoPositionInput" type="number">
+    </div>
+    
+    <div>
+      <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+      <input id="toggleCompletedPositionInput" type="number">
+    </div>
+    
+    <ul>
+    </ul>
+    <script src="todos.js"></script>
+  </body>
 </html>
