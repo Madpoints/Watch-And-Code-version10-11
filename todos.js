@@ -14,7 +14,7 @@ var todoList = {
         view.displayTodos();
     },
     deleteTodo: function(position) {
-        this.todos.splice(position - 1, 1);
+        this.todos.splice(position, 1);
         view.displayTodos();
     },
     toggleCompleted: function(position) {
@@ -94,11 +94,11 @@ var view = {
             if (todoList.todos[i].completed === true){
                 check = "(x) ";
                 console.log('Todo', i, ':', check, todoList.todos[i].todoText);
-                $('#todos').append('<li>' + check + todoList.todos[i].todoText + '</li>').append(this.createDeleteButton());
+                $('#todos').append('<li id ="' + i + '">' + check + todoList.todos[i].todoText + '</li>').append(this.createDeleteButton());
             }
             else {
                 console.log('Todo', i, ':', check, todoList.todos[i].todoText);
-                $('#todos').append('<li>'+ check + todoList.todos[i].todoText + '</li>').append(this.createDeleteButton());
+                $('#todos').append('<li id="' + i + '">'+ check + todoList.todos[i].todoText + '</li>').append(this.createDeleteButton());
             }
         }
         
